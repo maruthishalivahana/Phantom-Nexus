@@ -1,0 +1,97 @@
+[debug] [2025-07-28T17:02:25.381Z] ----------------------------------------------------------------------
+[debug] [2025-07-28T17:02:25.383Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\kumma\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-07-28T17:02:25.383Z] CLI Version:   14.11.1
+[debug] [2025-07-28T17:02:25.383Z] Platform:      win32
+[debug] [2025-07-28T17:02:25.383Z] Node Version:  v23.7.0
+[debug] [2025-07-28T17:02:25.383Z] Time:          Mon Jul 28 2025 22:32:25 GMT+0530 (India Standard Time)
+[debug] [2025-07-28T17:02:25.384Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-07-28T17:02:25.388Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-07-28T17:02:25.388Z] > authorizing via signed-in user (maruthikummari553@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\kumma\OneDrive\Desktop\github
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-07-28T17:04:55.038Z] Checked if tokens are valid: true, expires at: 1753725723699
+[debug] [2025-07-28T17:04:55.038Z] Checked if tokens are valid: true, expires at: 1753725723699
+[debug] [2025-07-28T17:04:55.040Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/availableProjects pageSize=100
+[debug] [2025-07-28T17:04:56.279Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/availableProjects 200
+[debug] [2025-07-28T17:04:56.279Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/availableProjects [omitted]
+[debug] [2025-07-28T17:05:11.251Z] Checked if tokens are valid: true, expires at: 1753725723699
+[debug] [2025-07-28T17:05:11.251Z] Checked if tokens are valid: true, expires at: 1753725723699
+[debug] [2025-07-28T17:05:11.251Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/moonlit-poetry-467206-b8:addFirebase [none]
+[debug] [2025-07-28T17:05:13.322Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/moonlit-poetry-467206-b8:addFirebase 200
+[debug] [2025-07-28T17:05:13.322Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/moonlit-poetry-467206-b8:addFirebase {"name":"operations/workflows/YzBmMWU2NTAtMzNhMy00NDk4LTlhYjItNmNmMmM5ZGY3ZGE1"}
+[debug] [2025-07-28T17:05:13.325Z] Checked if tokens are valid: true, expires at: 1753725723699
+[debug] [2025-07-28T17:05:13.325Z] Checked if tokens are valid: true, expires at: 1753725723699
+[debug] [2025-07-28T17:05:13.325Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YzBmMWU2NTAtMzNhMy00NDk4LTlhYjItNmNmMmM5ZGY3ZGE1 [none]
+[debug] [2025-07-28T17:05:14.690Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YzBmMWU2NTAtMzNhMy00NDk4LTlhYjItNmNmMmM5ZGY3ZGE1 200
+[debug] [2025-07-28T17:05:14.690Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YzBmMWU2NTAtMzNhMy00NDk4LTlhYjItNmNmMmM5ZGY3ZGE1 {"name":"operations/workflows/YzBmMWU2NTAtMzNhMy00NDk4LTlhYjItNmNmMmM5ZGY3ZGE1"}
+[debug] [2025-07-28T17:05:15.202Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-07-28T17:05:15.203Z] Checked if tokens are valid: true, expires at: 1753725723699
+[debug] [2025-07-28T17:05:15.203Z] Checked if tokens are valid: true, expires at: 1753725723699
+[debug] [2025-07-28T17:05:15.203Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YzBmMWU2NTAtMzNhMy00NDk4LTlhYjItNmNmMmM5ZGY3ZGE1 [none]
+[debug] [2025-07-28T17:05:15.692Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YzBmMWU2NTAtMzNhMy00NDk4LTlhYjItNmNmMmM5ZGY3ZGE1 200
+[debug] [2025-07-28T17:05:15.692Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YzBmMWU2NTAtMzNhMy00NDk4LTlhYjItNmNmMmM5ZGY3ZGE1 {"name":"operations/workflows/YzBmMWU2NTAtMzNhMy00NDk4LTlhYjItNmNmMmM5ZGY3ZGE1"}
+[debug] [2025-07-28T17:05:16.701Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-07-28T17:05:16.701Z] Checked if tokens are valid: true, expires at: 1753725723699
+[debug] [2025-07-28T17:05:16.701Z] Checked if tokens are valid: true, expires at: 1753725723699
+[debug] [2025-07-28T17:05:16.701Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YzBmMWU2NTAtMzNhMy00NDk4LTlhYjItNmNmMmM5ZGY3ZGE1 [none]
+[debug] [2025-07-28T17:05:17.178Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YzBmMWU2NTAtMzNhMy00NDk4LTlhYjItNmNmMmM5ZGY3ZGE1 200
+[debug] [2025-07-28T17:05:17.178Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YzBmMWU2NTAtMzNhMy00NDk4LTlhYjItNmNmMmM5ZGY3ZGE1 {"name":"operations/workflows/YzBmMWU2NTAtMzNhMy00NDk4LTlhYjItNmNmMmM5ZGY3ZGE1"}
+[debug] [2025-07-28T17:05:19.186Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-07-28T17:05:19.187Z] Checked if tokens are valid: true, expires at: 1753725723699
+[debug] [2025-07-28T17:05:19.188Z] Checked if tokens are valid: true, expires at: 1753725723699
+[debug] [2025-07-28T17:05:19.188Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YzBmMWU2NTAtMzNhMy00NDk4LTlhYjItNmNmMmM5ZGY3ZGE1 [none]
+[debug] [2025-07-28T17:05:19.607Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YzBmMWU2NTAtMzNhMy00NDk4LTlhYjItNmNmMmM5ZGY3ZGE1 200
+[debug] [2025-07-28T17:05:19.608Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YzBmMWU2NTAtMzNhMy00NDk4LTlhYjItNmNmMmM5ZGY3ZGE1 {"name":"operations/workflows/YzBmMWU2NTAtMzNhMy00NDk4LTlhYjItNmNmMmM5ZGY3ZGE1"}
+[debug] [2025-07-28T17:05:23.622Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-07-28T17:05:23.623Z] Checked if tokens are valid: true, expires at: 1753725723699
+[debug] [2025-07-28T17:05:23.623Z] Checked if tokens are valid: true, expires at: 1753725723699
+[debug] [2025-07-28T17:05:23.624Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YzBmMWU2NTAtMzNhMy00NDk4LTlhYjItNmNmMmM5ZGY3ZGE1 [none]
+[debug] [2025-07-28T17:05:24.137Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YzBmMWU2NTAtMzNhMy00NDk4LTlhYjItNmNmMmM5ZGY3ZGE1 200
+[debug] [2025-07-28T17:05:24.137Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/YzBmMWU2NTAtMzNhMy00NDk4LTlhYjItNmNmMmM5ZGY3ZGE1 {"name":"operations/workflows/YzBmMWU2NTAtMzNhMy00NDk4LTlhYjItNmNmMmM5ZGY3ZGE1","done":true,"response":{"@type":"type.googleapis.com/google.firebase.service.v1beta1.FirebaseProject","projectId":"moonlit-poetry-467206-b8","projectNumber":"1041117777045","displayName":"My First Project","name":"projects/moonlit-poetry-467206-b8","resources":{"hostingSite":"moonlit-poetry-467206-b8"}}}
+[info] 
+[info] === Your Firebase project is ready! ===
+[info] 
+[info] Project information:
+[info]    - Project ID: moonlit-poetry-467206-b8
+[info]    - Project Name: My First Project
+[info] 
+[info] Firebase console is available at
+[info] https://console.firebase.google.com/project/moonlit-poetry-467206-b8/overview
+[info] i  Using project moonlit-poetry-467206-b8 (My First Project) 
+[info] 
+=== Storage Setup
+[info] 
+[info] Firebase Storage Security Rules allow you to define how and when to allow
+[info] uploads and downloads. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2025-07-28T17:20:34.068Z] ExitPromptError: User force closed the prompt with SIGINT
+    at Interface.sigint (C:\Users\kumma\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\@inquirer\core\dist\commonjs\lib\create-prompt.js:101:37)
+    at Interface.emit (node:events:507:28)
+    at Interface.emit (node:domain:489:12)
+    at [_ttyWrite] [as _ttyWrite] (node:internal/readline/interface:1125:18)
+    at ReadStream.onkeypress (node:internal/readline/interface:264:20)
+    at ReadStream.emit (node:events:519:35)
+    at ReadStream.emit (node:domain:489:12)
+    at emitKeys (node:internal/readline/utils:370:14)
+    at emitKeys.next (<anonymous>)
+    at ReadStream.onData (node:internal/readline/emitKeypressEvents:64:36)
+[error] 
+[error] Error: An unexpected error has occurred.
