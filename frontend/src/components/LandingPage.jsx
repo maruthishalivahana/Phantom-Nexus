@@ -4,17 +4,17 @@ import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-reac
 
 
 const LandingPage = () => {
-    const navigate = useNavigate(); // <-- Hook for navigation
+    const navigate = useNavigate();
 
     const handleGetStarted = () => {
-        navigate('/dashboard');  // <-- Navigate to your Dashboard route
+        navigate('/dashboard');
     };
     return (
         <div className="min-h-screen bg-white text-black font-sans">
             <header className="w-full flex justify-between items-center px-8 py-6 shadow-sm bg-white sticky top-0 z-50">
                 <h1 className="text-2xl font-bold">Phantom Nexus</h1>
                 <div className="flex space-x-4">
-                    {/* <button className="px-6 py-2 rounded-full bg-black text-white hover:bg-gray-800 transition">Sign In</button> */}
+
                     <SignedOut>
                         <SignInButton mode="modal">
                             <button className="px-6 py-2 rounded-full bg-black text-white hover:bg-gray-800 transition" onClick={handleGetStarted}>
@@ -38,8 +38,7 @@ const LandingPage = () => {
                         Connect your GitHub account to analyze your real coding skills and get a personalized career roadmap powered by AI insights.
                     </p>
                     <div className="mt-10 flex justify-center space-x-4">
-                        <button className="px-8 py-4 rounded-full bg-black text-white text-lg hover:bg-gray-800 transition">Connect GitHub</button>
-                        <button className="px-8 py-4 rounded-full border border-black text-black text-lg hover:bg-gray-100 transition">Learn More</button>
+
                     </div>
                 </section>
             </main>

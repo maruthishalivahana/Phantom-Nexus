@@ -1,8 +1,6 @@
 
-
-
-
 const express = require('express');
+const router = express.Router();
 const axios = require('axios');
 const cors = require('cors');
 require('dotenv').config();
@@ -109,25 +107,25 @@ app.post('/api/gemini/roadmap', async (req, res) => {
     }
 
     const prompt = `
-You are an expert Career Roadmap Advisor.
-GitHub Profile:
-- Username: ${username}
-- Top Languages: ${topLanguages.join(', ')}
+    You are an expert Career Roadmap Advisor.
+    GitHub Profile:
+    - Username: ${username}
+    - Top Languages: ${topLanguages.join(', ')}
 
-Repositories:
-${repositories.map(repo => `
-• ${repo.name}
-  - Languages: ${repo.languages.join(', ') || 'No languages'}
-  - Description: ${repo.description}
-  - README Preview: ${repo.readme}
-`).join('\n')}
+    Repositories:
+    ${repositories.map(repo => `
+    • ${repo.name}
+      - Languages: ${repo.languages.join(', ') || 'No languages'}
+      - Description: ${repo.description}
+      - README Preview: ${repo.readme}
+    `).join('\n')}
 
-Based on this data:
-1. Highlight strong technical areas.
-2. Recommend 3 next skills.
-3. Suggest potential career paths.
-4. Provide 2-3 upskilling resources.
-`;
+    Based on this data:
+    1. Highlight strong technical areas.
+    2. Recommend 3 next skills.
+    3. Suggest potential career paths.
+    4. Provide 2-3 upskilling resources.
+    `;
 
     try {
         const response = await axios.post(
@@ -146,6 +144,59 @@ Based on this data:
         res.status(500).json({ error: 'Failed to fetch roadmap from Gemini', details: error.response?.data || error.message });
     }
 });
+app.post('/api/roadmapQuery', async (req, res) => {
+    const { query, roadmap } = req.body;
+
+    console.log('Received Query:', query);
+    console.log('Received Roadmap:', roadmap);
+    if (!query || !roadmap) {
+        return res.status(400).json({ error: 'Missing query or roadmap data' });
+    }
+
+    try {
+        const geminiResponse = await callGeminiAPI(query, roadmap);
+        res.json({ answer: geminiResponse });
+    } catch (error) {
+        console.error('Gemini API Error:', error.message);
+        res.status(500).json({ error: 'Failed to process query' });
+    }
+});
+
+async function callGeminiAPI(query, roadmap) {
+    try {
+        const response = await axios.post(
+            `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${process.env.GEMINI_API_KEY2}`,
+            {
+                contents: [
+                    {
+                        role: "user",
+                        parts: [
+                            {
+                                text: `Roadmap Context:\n${roadmap}\n\nUser Question:\n${query}`
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                headers: { 'Content-Type': 'application/json' }
+            }
+        );
+
+        const data = response.data;
+
+        if (data.candidates && data.candidates.length > 0) {
+            return data.candidates[0].content.parts[0].text;
+        } else {
+            return 'Sorry, I couldn\'t find an answer to your query.';
+        }
+    } catch (err) {
+        console.error('Axios Gemini API Error:', err.response?.data || err.message);
+        throw err;
+    }
+}
+
+
 
 // Helper to Extract Top Languages
 function extractTopLanguages(repos) {
