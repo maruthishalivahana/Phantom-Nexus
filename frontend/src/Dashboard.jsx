@@ -4,6 +4,8 @@ import { useEffect, useState, } from 'react';
 import React from 'react';
 // import { SignedIn, SignedOut, RedirectToSignIn, UserButton, useUser } from '@clerk/clerk-react';
 import axios from 'axios';
+const apiUrl = import.meta.env.VITE_API_URL;
+
 
 function Dashboard() {
     // const { user } = useUser();
@@ -27,12 +29,12 @@ function Dashboard() {
     }, []);
 
     const connectGitHub = () => {
-        window.location.href = 'http://localhost:5000/auth/github';
+        window.location.href = `${apiUrl}/auth/github`;
     };
 
     const fetchRepos = async (token) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/github/repos?token=${token}`);
+            const response = await fetch(`${apiUrl}/api/github/repos?token=${token}`);
             const data = await response.json();
 
             if (response.ok) {
@@ -53,7 +55,7 @@ function Dashboard() {
     const sendToGeminiAPI = async (githubData) => {
         setLoadingRoadmap(true);
         try {
-            const response = await fetch('http://localhost:5000/api/gemini/roadmap', {
+            const response = await fetch(`${apiUrl}/api/gemini/roadmap`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(githubData)
@@ -86,7 +88,7 @@ function Dashboard() {
         setChatHistory(prev => [...prev, { role: 'user', text: userQuery }]);
 
         try {
-            const response = await axios.post('http://localhost:5000/api/roadmapQuery', {
+            const response = await axios.post(`${apiUrl}/api/roadmapQuery`, {
                 query: userQuery,
                 roadmap: roadmap
             });
