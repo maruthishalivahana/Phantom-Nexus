@@ -125,6 +125,8 @@ app.post('/api/gemini/roadmap', async (req, res) => {
     2. Recommend 3 next skills.
     3. Suggest potential career paths.
     4. Provide 2-3 upskilling resources.
+    "Output the response in plain text only. Do not use markdown symbols like *, **,."
+
     `;
 
     try {
@@ -147,8 +149,8 @@ app.post('/api/gemini/roadmap', async (req, res) => {
 app.post('/api/roadmapQuery', async (req, res) => {
     const { query, roadmap } = req.body;
 
-    console.log('Received Query:', query);
-    console.log('Received Roadmap:', roadmap);
+    // console.log('Received Query:', query);
+    // console.log('Received Roadmap:', roadmap);
     if (!query || !roadmap) {
         return res.status(400).json({ error: 'Missing query or roadmap data' });
     }
