@@ -39,6 +39,7 @@ const LandingPage = () => {
                     <nav className="hidden md:flex items-center space-x-8">
                         <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">Features</a>
                         <a href="#process" className="text-gray-600 hover:text-gray-900 transition-colors">Process</a>
+                        <a href="#faq" className="text-gray-600 hover:text-gray-900 transition-colors">FAQS</a>
                     </nav>
                     <button
                         onClick={handleGetStarted}
@@ -121,7 +122,7 @@ const LandingPage = () => {
                         </div>
                     </section>
                 </main>
-                <div className='flex flex-col items-center justify-center mt-10 m-30 fade-in'>
+                <div className='flex flex-col items-center justify-center mt-10 m-30 fade-in' id='faq'>
                     <h1 className='text-3xl md:text-4xl font-bold text-gray-900'>Frequently asked questions</h1>
                     <FAQ />
                 </div>

@@ -142,12 +142,12 @@ function Dashboard() {
 
                 {!connected && (
                     <div className="min-h-screen flex flex-col items-center px-6 py-10 font-sans relative overflow-hidden">
-                        <header className="w-full max-w-6xl flex justify-between items-center backdrop-blur-md bg-white/70 border border-white/30 rounded-3xl shadow-md py-4 px-6 mb-16 transition-all">
+                        {/* <header className="w-full max-w-6xl flex justify-between items-center backdrop-blur-md bg-white/70 border border-white/30 rounded-3xl shadow-md py-4 px-6 mb-16 transition-all">
                             <h1 className="text-2xl font-extrabold text-violet-700">Phantom Nexus</h1>
                             <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 font-semibold shadow-inner cursor-pointer hover:scale-105 transition-transform">
                                 JD
                             </div>
-                        </header>
+                        </header> */}
 
                         <main className="flex flex-col items-center text-center max-w-3xl z-10">
                             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-snug">
@@ -159,7 +159,7 @@ function Dashboard() {
                                 We’ll Craft A Personalized Career Roadmap That Aligns With Your Real Coding Experience.
                             </p>
 
-                            <button className="mt-10 flex items-center px-8 py-4 rounded-full bg-violet-600 text-white font-semibold text-lg shadow-lg hover:bg-violet-700 transition-all hover:scale-105 focus:ring-4 focus:ring-violet-400" onClick={connectGitHub}>
+                            <button className="mt-10 flex items-center px-8 py-4 rounded-full bg-black text-white font-semibold text-lg shadow-lg hover:bg-black-700 transition-all hover:scale-105 focus:ring-4 focus:ring-violet-400" onClick={connectGitHub}>
                                 Connect GitHub
                             </button>
                         </main>
