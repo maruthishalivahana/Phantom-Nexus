@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import HeroTypingEffect from './HeroTypingEffect';
+import FAQ from './FAQ';
 
 import image2 from '../assets/img2.png';
 
@@ -54,7 +55,7 @@ const LandingPage = () => {
                         <div className="max-w-4xl mx-auto">
                             <HeroTypingEffect />
                             {/* </h2> */}
-                            <p className="mt-6 text-lg text-gray-700 max-w-2xl mx-auto fade-in delay-200">
+                            <p className="mt-6 text-lg text-gray-700 max-w-2xl mx-auto fade-in ">
                                 Connect your <strong className='text-blue-500 text-2xl'>GitHub </strong> to unlock a personalized career roadmap. We analyze your coding patterns to provide AI-powered insights that guide you to success.
                             </p>
                             <div className="mt-10 flex justify-center fade-in delay-400">
@@ -76,15 +77,15 @@ const LandingPage = () => {
                                 <p className="text-lg text-gray-600 mt-4">Go beyond generic advice. Get a roadmap that understands you.</p>
                             </div>
                             <div className="grid md:grid-cols-3 gap-8 text-center">
-                                <div className="p-8 bg-gray-50 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-100 fade-in">
+                                <div className="p-8 bg-gray-50 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-100 fade-in ">
                                     <h4 className="text-xl font-semibold mb-3 text-gray-900">Deep Skill Analysis</h4>
                                     <p className="text-gray-700">We analyze your repositories to identify your true technical strengths and hidden potential.</p>
                                 </div>
-                                <div className="p-8 bg-gray-50 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-100 fade-in ">
+                                <div className="p-8 bg-gray-50 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-100 fade-in delay-200 ">
                                     <h4 className="text-xl font-semibold mb-3 text-gray-900">AI-Generated Roadmap</h4>
                                     <p className="text-gray-700">Receive a dynamic, step-by-step plan to level up your skills and achieve your career ambitions.</p>
                                 </div>
-                                <div className="p-8 bg-gray-50 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-100 fade-in ">
+                                <div className="p-8 bg-gray-50 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-100 fade-in delay-400 ">
                                     <h4 className="text-xl font-semibold mb-3 text-gray-900">Profile Optimization</h4>
                                     <p className="text-gray-700">Get actionable tips to enhance your GitHub profile, turning it into a powerful career asset.</p>
                                 </div>
@@ -98,7 +99,7 @@ const LandingPage = () => {
                             <div className="text-center mb-16">
                                 <h3 className="text-3xl md:text-4xl font-bold text-gray-900">A Simple, Powerful Process</h3>
                             </div>
-                            <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
+                            <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-16">
                                 <div className="flex items-center  flex-col text-center p-6 fade-in">
                                     <div className="bg-gray-900 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4">1</div>
                                     <h4 className="text-xl font-semibold mb-2">Connect GitHub</h4>
@@ -120,6 +121,11 @@ const LandingPage = () => {
                         </div>
                     </section>
                 </main>
+                <div className='flex flex-col items-center justify-center mt-10 m-30 fade-in'>
+                    <h1 className='text-3xl md:text-4xl font-bold text-gray-900'>Frequently asked questions</h1>
+                    <FAQ />
+                </div>
+
 
                 {/* Footer */}
                 <footer className="px-6 md:px-20 py-10 bg-gray-900 text-white">
