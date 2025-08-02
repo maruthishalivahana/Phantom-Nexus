@@ -1,62 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import HeroTypingEffect from './HeroTypingEffect';
-// import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react';
 
-// const LandingPage = () => {
+import image2 from '../assets/img2.png';
 
-//     return (
-//         <div className="min-h-screen bg-white text-black font-sans">
-//             <header className="w-full flex justify-between items-center px-8 py-6 shadow-sm bg-white sticky top-0 z-50">
-//                 <h1 className="text-2xl font-bold">Phantom Nexus</h1>
-//                 <div className="flex space-x-4">
-//                     <button className="px-6 py-2 rounded-full border border-black text-black hover:bg-gray-100 transition" onClick={handleGetStarted}>Get Started</button>
-//                 </div>
-//             </header>
-
-//             <main className="px-6 md:px-20 py-16 bg-[whitesmoke] rounded-b-3xl">
-//                 <section className="max-w-4xl mx-auto text-center">
-//                     <h2 className="text-4xl md:text-6xl font-extrabold leading-tight">
-//                         Build Your AI Career Roadmap<br />With GitHub Insights
-//                     </h2>
-//                     <p className="mt-6 text-lg text-gray-700">
-//                         Connect your GitHub account to analyze your real coding skills and get a personalized career roadmap powered by AI insights.
-//                     </p>
-//                     <div className="mt-10 flex justify-center space-x-4">
-
-//                     </div>
-//                 </section>
-//             </main>
-
-//             <section className="px-6 md:px-20 py-16 bg-white">
-//                 <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-//                     <div className="p-6 bg-[whitesmoke] rounded-2xl shadow-md hover:scale-110">
-//                         <h3 className="text-xl font-semibold mb-2  ">Skill Analysis</h3>
-//                         <p className="text-gray-700">We analyze your GitHub projects to understand your technical strengths and areas of improvement.</p>
-//                     </div>
-//                     <div className="p-6 bg-[whitesmoke] rounded-2xl shadow-md">
-//                         <h3 className="text-xl font-semibold mb-2">AI-Generated Roadmap</h3>
-//                         <p className="text-gray-700">Our AI crafts a step-by-step roadmap to elevate your skills and align with your career goals.</p>
-//                     </div>
-//                     <div className="p-6 bg-[whitesmoke] rounded-2xl shadow-md">
-//                         <h3 className="text-xl font-semibold mb-2">Profile Optimization</h3>
-//                         <p className="text-gray-700">Get actionable suggestions to enhance your GitHub profile, including README enhancements and project ideas.</p>
-//                     </div>
-//                 </div>
-//             </section>
-
-//             <footer className="px-6 md:px-20 py-10 bg-black text-white text-center rounded-t-3xl">
-//                 <p className="mb-4">&copy; 2025 Phantom Nexus. All rights reserved.</p>
-//                 <div className="flex justify-center space-x-6">
-//                     <a href="#" className="hover:underline">Privacy Policy</a>
-//                     <a href="#" className="hover:underline">Terms of Service</a>
-//                 </div>
-//             </footer>
-//         </div>
-//     );
-// };
-
-// export default LandingPage;
 const GlobalStyles = () => (
     <style>{`
         @keyframes fadeIn {
@@ -105,7 +52,6 @@ const LandingPage = () => {
                     {/* Hero Section */}
                     <section className="relative px-6 md:px-20 py-24 md:py-32 text-center bg-gradient-to-br from-white to-gray-200">
                         <div className="max-w-4xl mx-auto">
-                            {/* <h2 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight fade-in"> */}
                             <HeroTypingEffect />
                             {/* </h2> */}
                             <p className="mt-6 text-lg text-gray-700 max-w-2xl mx-auto fade-in delay-200">

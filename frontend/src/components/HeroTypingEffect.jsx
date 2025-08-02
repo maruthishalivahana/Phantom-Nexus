@@ -32,7 +32,7 @@ const HeroTypingEffect = () => {
     }, [charIndex, currentLine]);
 
     return (
-        <h2 className={`text-4xl font-bold ${taglines[currentLine].color}`}>
+        <h2 className={`text-5xl font-bold ${taglines[currentLine].color}`}>
             {displayedText}<span className="blinking-cursor">|</span>
         </h2>
     );
