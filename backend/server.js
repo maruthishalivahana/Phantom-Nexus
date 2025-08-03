@@ -7,10 +7,18 @@ require('dotenv').config();
 
 const app = express();
 
+const allowedOrigins = ['https://phantom-nexus-reto.vercel.app', 'http://localhost:5173'];
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
     credentials: true
 }));
+
 app.use(express.json());
 
 // GitHub OAuth Flow
@@ -39,7 +47,7 @@ app.get('/auth/github/callback', async (req, res) => {
         });
 
         const username = userResponse.data.login;
-        res.redirect(`http://localhost:5173/dashboard?username=${username}&token=${accessToken}`);
+        res.redirect(`https://phantom-nexus-reto.vercel.app/dashboard?username=${username}&token=${accessToken}`);
     } catch (err) {
         console.error('OAuth Error:', err.response?.data || err.message);
         res.status(500).send('OAuth Process Failed');

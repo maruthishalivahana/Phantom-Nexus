@@ -32,25 +32,46 @@ function Dashboard() {
         window.location.href = `${apiUrl}/auth/github`;
     };
 
+    // const fetchRepos = async (token) => {
+    //     try {
+    //         const response = await fetch(`${apiUrl}/api/github/repos?token=${token}`);
+    //         const data = await response.json();
+
+    //         if (response.ok) {
+    //             setRepos(data.repositories);
+    //             sendToGeminiAPI({
+    //                 username: data.username,
+    //                 topLanguages: data.topLanguages,
+    //                 repositories: data.repositories
+    //             });
+    //         } else {
+    //             console.error('Failed to fetch repos');
+    //         }
+    //     } catch (error) {
+    //         console.error('Error:', error);
+    //     }
+    // };
     const fetchRepos = async (token) => {
         try {
-            const response = await fetch(`${apiUrl}/api/github/repos?token=${token}`);
-            const data = await response.json();
+            const response = await axios.get(`${apiUrl}/api/github/repos`, {
+                params: { token }
+            });
 
-            if (response.ok) {
-                setRepos(data.repositories);
-                sendToGeminiAPI({
-                    username: data.username,
-                    topLanguages: data.topLanguages,
-                    repositories: data.repositories
-                });
-            } else {
-                console.error('Failed to fetch repos');
-            }
+            const data = response.data;  // Axios auto parses JSON
+
+            setRepos(data.repositories);
+
+            sendToGeminiAPI({
+                username: data.username,
+                topLanguages: data.topLanguages,
+                repositories: data.repositories
+            });
+
         } catch (error) {
-            console.error('Error:', error);
+            console.error('Error fetching repos:', error.response?.data || error.message);
         }
     };
+
 
     const sendToGeminiAPI = async (githubData) => {
         setLoadingRoadmap(true);
